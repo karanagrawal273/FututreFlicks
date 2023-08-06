@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Cart;
 use App\Models\Order;
+use App\Models\Buy;
 use Session;
 use Illuminate\Support\Facades\DB;
 class ProductController extends Controller
@@ -85,5 +86,17 @@ class ProductController extends Controller
         ->where('orders.user_id',$userId)
         ->get();
        return view('myorder',['orders'=>$orders]);
+    }
+    function buyNow(){
+        if(Session::has('user')){
+            // $buy = new Buy;
+            // $buy->user_id=$req->session()->get('user')['id'];
+            // $buy->product_id=$req->product_id;
+            // $buy->save();
+            return redirect('/buynow');
+        }
+        else{
+            return redirect('/login');
+        }
     }
 }

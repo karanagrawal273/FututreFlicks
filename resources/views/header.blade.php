@@ -15,7 +15,7 @@ if(Session::has('user')){
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">E-Commerce</a>
+      <a class="navbar-brand" href="/">FutureFlicks</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
